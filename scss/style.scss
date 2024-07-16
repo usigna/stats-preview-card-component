@@ -1,0 +1,156 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf");
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.25%;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Inter", sans-serif;
+  background-color: #0a0c1b;
+  padding: 80px 25px;
+
+  @media screen and (min-width: 1200px) {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.container {
+  max-width: 1010px;
+  background-color: #1c1938;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, .6);
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 24px;
+  line-height: 0;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.container__item {
+  &--text {
+    padding: 40px 30px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+      padding: 70px 100px 70px 65px;
+    }
+  }
+
+  &--image {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 10px 10px 0 0;
+      background-color: #a85bd4;
+      opacity: .7;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      @media screen and (min-width: 1200px) {
+        border-radius: 0 10px 10px 0;
+      }
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+
+      @media screen and (min-width: 1200px) {
+        border-radius: 0 10px 10px 0;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      border-radius: 0 10px 10px 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 50%;
+  }
+}
+
+.title {
+  color: #fdfefd;
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+  line-height: 1.3;
+
+  span {
+    color: #a85bd4;
+  }
+}
+
+.text {
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
+.number {
+  color: #fdfefd;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.category {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: "Lexend Deca";
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  color: #ffffff;
+}
+
+.attribution a { 
+  color: #a85bd4; 
+}
